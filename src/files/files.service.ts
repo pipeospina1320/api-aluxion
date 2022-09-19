@@ -18,7 +18,6 @@ export class FilesService {
   async create(file: Express.Multer.File, createFileDto: CreateFileDto) {
     const { name } = createFileDto;
     const respUpload = await this.uploadFile.upload(file, randomUUID());
-    console.log(respUpload);
     const newFile = this.fileRepository.create({
       key: respUpload.Key,
       url: respUpload.Location,

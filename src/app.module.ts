@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { FilesModule } from './files/files.module';
 import { CommonModule } from './common/common.module';
 import { ServicesModule } from './services/services.module';
+import { SearcherModule } from './searcher/searcher.module';
+import { AuthModule } from './security/auth/auth.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { ServicesModule } from './services/services.module';
     FilesModule,
     CommonModule,
     ServicesModule,
+    SearcherModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],

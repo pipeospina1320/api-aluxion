@@ -45,7 +45,6 @@ export class S3Service implements UploadFile {
       Key: key,
     };
     const stream = await this.s3.getObject(options).promise();
-    console.log(stream);
     return stream;
   }
 }
